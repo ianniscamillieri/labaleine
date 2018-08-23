@@ -11,8 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 18px;
-
-  margin: 0;
+  line-height: 120%;
   text-align: center;
 }
 
@@ -34,20 +33,62 @@ body {
   display: none;
 }
 
-.introduction {
-  font-size: 1.5rem;
+.logo .arrowdown a {
+  font-size: calc(1rem + 4vmin);
+  opacity: 0.5;
   color: #bb562d;
-  margin: 2vw 10vw;
+  position: relative;
+  top: 85vmin;
+}
+
+.introduction {
+  font-size: calc(1rem + 1vw);
+  line-height: 120%;
+  color: #bb562d;
+  margin: 4vw 10vw;
+}
+
+.introduction p + p {
+  margin-top: 10px;
 }
 
 .teaser {
   font-size: calc(2rem + 3vw);
-  font-weight: bolder;
+  font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 0.3vw;
+  margin: 6vw 2vw 3vw 2vw;
+}
+
+.baseline {
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 10px auto;
+  width: 50vw;
+  min-width: 330px;
+  max-width: 460px;
+  line-height: 130%;
 }
 
 .footer {
   background-color: #333;
   color: #ddd;
-  padding: 2vw;
+  padding-top: 3vw;
+  padding-bottom: 5vw;
+  margin-top: 4vw;
+}
+
+.footer .social {
+  margin-bottom: 2rem;
+}
+
+.footer .social a {
+  color: #fff8da;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+}
+
+.footer .social i {
+  font-size: 1.5rem;
 }
