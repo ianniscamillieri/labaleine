@@ -39,12 +39,15 @@ body {
   opacity: 0.5;
   color: #bb562d;
   position: relative;
-  top: 85vmin;
+  top: 80vmin;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 .logo .arrowdown a:hover,
 .logo .arrowdown a:focus {
   opacity: 0.8;
+  font-size: calc(1.5rem + 4vmin);
 }
 
 /* BODY */
