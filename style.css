@@ -1,10 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
-
-@font-face {
-  font-display: fallback;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-html {
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 body {
@@ -15,13 +142,12 @@ body {
   text-align: center;
 }
 
-/* HEADER */
 .header {
   background-color: #fff8da;
   width: 100vw;
 }
 
-.logo {
+.header .logo {
   width: 100vw;
   height: 100vmin;
   background-image: url(./assets/images/logo.png);
@@ -30,11 +156,11 @@ body {
   background-repeat: no-repeat;
 }
 
-.logo h1 {
+.header .logo h1 {
   display: none;
 }
 
-.logo .arrowdown a {
+.header .logo .arrowdown a {
   font-size: calc(1rem + 4vmin);
   opacity: 0.5;
   color: #bb562d;
@@ -44,13 +170,11 @@ body {
   transition-duration: 0.5s;
 }
 
-.logo .arrowdown a:hover,
-.logo .arrowdown a:focus {
+.header .logo .arrowdown a:hover, .header .logo .arrowdown a:focus {
   opacity: 0.8;
   font-size: calc(1.5rem + 4vmin);
 }
 
-/* BODY */
 .introduction {
   font-size: calc(1rem + 1vw);
   line-height: 120%;
@@ -80,32 +204,48 @@ body {
   line-height: 130%;
 }
 
-/* FOOTER */
 .footer {
   background-color: #333;
   color: #ddd;
-  padding-top: 5vw;
-  padding-bottom: 8vw;
+  font-size: 1rem;
+  /* padding-top: 5vw;
+  padding-bottom: 8vw; */
   margin-top: 8vw;
 }
 
-.footer .contacts p {
-  display: inline-block;
-}
-
-.footer .contacts p + p {
-  margin-left: 30px;
-}
-
-.footer .contacts a {
+.footer a {
   color: #fff8da;
-  font-size: 1.9rem;
   text-decoration: none;
 }
 
-.footer .contacts a:hover,
-.footer .contacts a:focus {
+.footer a:hover, .footer a:focus {
   color: #bb562d;
+}
+
+.footer .social {
+  background-color: #666;
+  margin: 0 auto;
+}
+
+.footer .social div {
+  display: inline-block;
+  margin: 1em;
+}
+
+.footer .social div .icon {
+  font-size: 2em;
+}
+
+.footer .social div .label {
+  display: none;
+}
+
+.footer .contact {
+  margin: 1em auto;
+  text-align: left;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (min-width: 400px) {
