@@ -87,7 +87,7 @@ body {
 }
 
 .agenda {
-  margin-top: 5vw;
+  margin-top: calc(0.6rem + 5vw);
 
   .button {
     background-color: $red;
