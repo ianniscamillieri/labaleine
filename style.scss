@@ -10,8 +10,10 @@ $grey-light: #bbb;
 $grey: #999;
 $grey-dark: #666;
 $grey-darker: #333;
-$yellow: #fff8da;
-$brown: #bb562d;
+$yellow: #fffaee;
+$gold: #a68431;
+$orange: #cc5300;
+$red: #b7332a;
 
 // GENERIC
 html {
@@ -48,7 +50,7 @@ body {
       a {
         font-size: calc(1rem + 4vmin);
         opacity: 0.5;
-        color: $brown;
+        color: $orange;
         position: relative;
         top: 80vmin;
         transition-property: all;
@@ -68,7 +70,7 @@ body {
 .introduction {
   font-size: calc(1rem + 1vw);
   line-height: 120%;
-  color: $brown;
+  color: $orange;
   margin: 4vw 10vw;
 
   p + p {
@@ -76,22 +78,41 @@ body {
   }
 }
 
-.teaser {
-  font-size: calc(1.3rem + 3vw);
+.announcement {
+  font-size: calc(1rem + 3vw);
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.3vw;
-  margin: 6vw 2vw 3vw 2vw;
+  letter-spacing: 0.1vw;
+  margin: 8vw 2vw 3vw;
 }
 
-.baseline {
-  background-color: $grey-light;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 20px auto;
-  width: 50vw;
-  max-width: 360px;
-  line-height: 130%;
+.agenda {
+  margin-top: 5vw;
+
+  .button {
+    background-color: $red;
+    color: $yellow;
+    font-size: calc(0.8rem + 1vw);
+    letter-spacing: 0.1vw;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+
+    .fas {
+      font-size: calc(1.1rem + 1vw);
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.signature {
+  color: $gold;
+  font-size: calc(1rem + 1vw);
+  line-height: 125%;
+  margin-top: 10vw;
 }
 
 // FOOTER
@@ -99,7 +120,7 @@ body {
 .footer {
   color: $grey-light;
   background-color: $grey-darker;
-  margin-top: 8vw;
+  margin-top: 2vw;
   padding-bottom: 3vw;
 
   .category {
@@ -119,7 +140,7 @@ body {
   }
 
   .social {
-    background-color: $grey-dark;
+    background-color: $gold;
     margin: 0 auto;
     padding: 1.5em 0;
 
@@ -179,8 +200,11 @@ body {
 
 // MEDIA QUERIES
 @media screen and (min-width: 414px) {
+  .signature {
+    margin-top: 8vw;
+  }
   .footer {
-    margin-top: 5vw;
+    margin-top: 2vw;
   }
 }
 
