@@ -31,34 +31,50 @@ body {
 
 // HEADER
 .header {
-  background-color: #fff8da;
+  background-color: $yellow;
   width: 100vw;
 
-  .logo {
+  .hero-image {
     width: 100vw;
     height: 100vmin;
-    background-image: url(./assets/images/logo.png);
-    background-size: 90vmin;
+    background-image: url(./assets/images/phalene.svg);
+    background-size: calc(35vmin + 30vw);
     background-position: center;
     background-repeat: no-repeat;
 
     h1 {
-      display: none;
+      background-image: url(./assets/images/logo_noir.svg);
+      width: 100vw;
+      height: 14vw;
+      background-size: 90vw;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      top: calc(50% - 7vw);
+
+      .hero-text {
+        display: none;
+        font-size: 14vw;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: black;
+        position: relative;
+        top: calc(50% - 7vw);
+      }
     }
 
-    .arrowdown {
+    .arrow-down {
       a {
         font-size: calc(1rem + 4vmin);
-        opacity: 0.5;
         color: $orange;
         position: relative;
-        top: 80vmin;
+        top: 60vmin;
         transition-property: all;
         transition-duration: 0.5s;
 
         &:hover,
         &:focus {
-          opacity: 0.8;
+          color: $red;
           font-size: calc(1.5rem + 4vmin);
         }
       }
