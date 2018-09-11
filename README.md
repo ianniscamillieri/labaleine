@@ -1,3 +1,3 @@
 # La Baleine Welcome Page
 
-This is a temporary welcome page for La Baleine in Marseille, France.
+This is a temporary welcome page for La Baleine, located in Marseille, France.
