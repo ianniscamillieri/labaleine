@@ -102,24 +102,36 @@ body {
   margin: 8vw 2vw 3vw;
 }
 
-.agenda {
-  margin-top: calc(0.6rem + 5vw);
+.cta {
+  margin-top: calc(0.6rem + 3vw);
 
-  .button {
-    background-color: $red;
-    color: $yellow;
-    font-size: calc(0.8rem + 1vw);
-    letter-spacing: 0.1vw;
-    font-weight: 700;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    border: 0;
-    text-decoration: none;
+  div {
+    display: inline-block;
+    margin: 1.5rem 0.5rem;
+    // min-height: 4rem;
 
-    .fas {
-      font-size: calc(1.1rem + 1vw);
-      margin-right: 0.5rem;
+    .button {
+      background-color: $red;
+      color: $yellow;
+      font-size: calc(0.7rem + 1vw);
+      letter-spacing: 0.1vw;
+      font-weight: 700;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      border: 0;
+      text-decoration: none;
+
+      .fas {
+        font-size: calc(1.1rem + 1vw);
+        margin-right: 0.5rem;
+        position: relative;
+        top: 0.3vw;
+      }
+    }
+    a:hover.button,
+    a:focus.button {
+      background-color: $orange;
     }
   }
 }
