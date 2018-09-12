@@ -1,8 +1,17 @@
 // style.scss
+@charset "utf-8";
 
-// IMPORT
+// PARTIALS
 @import "reset";
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900");
+
+// FONTS
+// font-family: 'Roboto', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
+// font-family: 'Roboto Condensed', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
+@font-face {
+  font-display: swap;
+}
 
 // VARIABLES
 $grey-lighter: #ddd;
@@ -43,10 +52,10 @@ body {
     background-repeat: no-repeat;
 
     h1 {
-      background-image: url(./assets/images/logo_noir.svg);
+      background-image: url(./assets/images/Logo-baseline-noir.svg);
       width: 100vw;
-      height: 14vw;
-      background-size: 90vw;
+      height: 22vw;
+      background-size: 80vw;
       background-position: center;
       background-repeat: no-repeat;
       position: relative;
@@ -55,7 +64,7 @@ body {
       .hero-text {
         display: none;
         font-size: 14vw;
-        font-weight: 900;
+        font-weight: 700;
         text-transform: uppercase;
         color: black;
         position: relative;
@@ -68,7 +77,7 @@ body {
         font-size: calc(1rem + 4vmin);
         color: $orange;
         position: relative;
-        top: 60vmin;
+        top: 50vmin;
         transition-property: all;
         transition-duration: 0.5s;
 
@@ -86,7 +95,7 @@ body {
 .introduction {
   font-size: calc(1rem + 1vw);
   line-height: 120%;
-  color: $orange;
+  color: $red;
   margin: 4vw 10vw;
 
   p + p {
@@ -95,8 +104,9 @@ body {
 }
 
 .announcement {
-  font-size: calc(1rem + 3vw);
-  font-weight: 900;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: calc(1.2rem + 3vw);
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1vw;
   margin: 8vw 2vw 3vw;
@@ -111,7 +121,7 @@ body {
     // min-height: 4rem;
 
     .button {
-      background-color: $red;
+      background-color: $orange;
       color: $yellow;
       font-size: calc(0.7rem + 1vw);
       letter-spacing: 0.1vw;
@@ -131,13 +141,49 @@ body {
     }
     a:hover.button,
     a:focus.button {
-      background-color: $orange;
+      background-color: $red;
     }
   }
 }
 
+.founders,
+.team {
+  margin: 0 auto;
+  padding: 2rem 10vw;
+  background-color: $yellow;
+  text-align: left;
+  line-height: 140%;
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  .name {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 120%;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: $gold;
+  }
+}
+
+.founders {
+  margin-top: 3rem;
+  background-color: $gold;
+
+  h3 {
+    color: $yellow;
+  }
+}
+
 .signature {
-  color: $gold;
+  color: $orange;
   font-size: calc(1rem + 1vw);
   line-height: 125%;
   margin-top: 10vw;
@@ -168,7 +214,7 @@ body {
   }
 
   .social {
-    background-color: $gold;
+    background-color: $orange;
     margin: 0 auto;
     padding: 1.5em 0;
 
@@ -229,7 +275,7 @@ body {
 // MEDIA QUERIES
 @media screen and (min-width: 414px) {
   .signature {
-    margin-top: 8vw;
+    margin-top: 5vw;
   }
   .footer {
     margin-top: 2vw;
