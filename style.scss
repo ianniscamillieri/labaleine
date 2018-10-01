@@ -138,7 +138,7 @@ body {
     .button {
       background-color: $orange;
       color: $yellow;
-      font-size: calc(0.7rem + 1vw);
+      font-size: calc(0.9rem + 1vw);
       letter-spacing: 0.1vw;
       font-weight: 700;
       padding: 1rem;
@@ -163,6 +163,7 @@ body {
 
 .founders,
 .team {
+  font-size: calc(1rem + 0.3vw);
   margin: 0 auto;
   padding: 2rem 10vw;
   background-color: $yellow;
@@ -178,7 +179,7 @@ body {
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 120%;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 700;
