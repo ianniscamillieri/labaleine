@@ -2,16 +2,15 @@
 @charset 'utf-8';
 
 // PARTIALS
-@import 'reset';
+@import "reset";
 
 // FONTS
 // font-family: 'Roboto', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i");
 // font-family: 'Roboto Condensed', sans-serif;
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i');
-@font-face
-{
-    font-display: swap;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i");
+@font-face {
+  font-display: swap;
 }
 
 // VARIABLES
@@ -26,457 +25,403 @@ $orange: #cc5300;
 $red: #b7332a;
 
 // GENERIC
-html
-{
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 120%;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 120%;
 
-    text-align: center;
+  text-align: center;
 
-    color: $grey-darker;
+  color: $grey-darker;
 }
 
-body
-{
-    font-size: 1rem;
+body {
+  font-size: 1rem;
 }
 
-.button
-{
-    display: inline-block;
+.button {
+  display: inline-block;
 
-    margin: 1.5rem .5rem;
+  margin: 1.5rem 0.5rem;
 
-    a
-    {
-        font-size: calc(.9rem + 1vw);
-        font-weight: 700;
+  a {
+    font-size: calc(0.9rem + 1vw);
+    font-weight: 700;
 
-        padding: 1rem;
+    padding: 1rem;
 
-        cursor: pointer;
-        text-decoration: none;
-        letter-spacing: .1vw;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.1vw;
 
-        color: $yellow;
-        border: 0;
-        border-radius: .5rem;
-        background-color: $orange;
+    color: $yellow;
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: $orange;
 
-        .fas,
-        .far
-        {
-            font-size: calc(1.1rem + 1vw);
+    .fas,
+    .far {
+      font-size: calc(1.1rem + 1vw);
 
-            position: relative;
-            top: .3vw;
+      position: relative;
+      top: 0.3vw;
 
-            margin-right: .5rem;
-        }
-
-        &:hover,
-        &:focus
-        {
-            background-color: $red;
-        }
+      margin-right: 0.5rem;
     }
+
+    &:hover,
+    &:focus {
+      background-color: $red;
+    }
+  }
 }
 
 // HEADER
-.header
-{
+.header {
+  width: 100vw;
+
+  background-color: $yellow;
+
+  .hero-image {
     width: 100vw;
+    height: 100vmin;
 
-    background-color: $yellow;
+    background-image: url(./assets/images/phalene.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: calc(35vmin + 30vw);
 
-    .hero-image
-    {
-        width: 100vw;
-        height: 100vmin;
+    h1 {
+      position: relative;
+      top: calc(50% - 11vw);
 
-        background-image: url(./assets/images/phalene.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: calc(35vmin + 30vw);
+      width: 100vw;
+      height: 22vw;
 
-        h1
-        {
-            position: relative;
-            top: calc(50% - 11vw);
+      animation: logo 1s;
 
-            width: 100vw;
-            height: 22vw;
+      background-image: url(./assets/images/Logo-baseline-noir.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80vw;
 
-            animation: logo 1s;
-
-            background-image: url(./assets/images/Logo-baseline-noir.svg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 80vw;
-
-            @keyframes logo
-            {
-                0%
-                {
-                    opacity: 0;
-                    background-size: 60vw;
-                }
-                50%
-                {
-                    opacity: 1;
-                }
-                100%
-                {
-                    background-size: 80vw;
-                }
-            }
-
-            .hero-text
-            {
-                font-size: 14vw;
-                font-weight: 700;
-
-                position: relative;
-                top: calc(50% - 7vw);
-
-                display: none;
-
-                text-transform: uppercase;
-
-                color: black;
-            }
+      @keyframes logo {
+        0% {
+          opacity: 0;
+          background-size: 60vw;
         }
-
-        .arrow-down
-        {
-            a
-            {
-                font-size: calc(1rem + 4vmin);
-
-                position: relative;
-                top: 50vmin;
-
-                transition-duration: .5s;
-                transition-property: all;
-
-                color: $orange;
-
-                &:hover,
-                &:focus
-                {
-                    font-size: calc(1.5rem + 4vmin);
-
-                    color: $red;
-                }
-            }
+        50% {
+          opacity: 1;
         }
-    }
-}
+        100% {
+          background-size: 80vw;
+        }
+      }
 
-// BODY
-.introduction
-{
-    font-size: calc(1rem + 1vw);
-    line-height: 120%;
+      .hero-text {
+        font-size: 14vw;
+        font-weight: 700;
 
-    margin: 0 10vw;
-    padding: 4vw;
+        position: relative;
+        top: calc(50% - 7vw);
 
-    color: $red;
-
-    p + p
-    {
-        margin-top: 10px;
-    }
-}
-
-.announcement
-{
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: calc(1.2rem + 3vw);
-    font-weight: 700;
-
-    margin: 4vw 2vw 3vw;
-
-    letter-spacing: .1vw;
-    text-transform: uppercase;
-}
-
-.cinema
-{
-    display: block;
-    overflow: hidden;
-
-    margin-top: calc(.5rem + 2vw);
-}
-
-.bistrot
-{
-    text-align: center;
-
-    border: 1px solid;
-
-    .fourchette_horizontal,
-    .fourchette_vertical
-    {
-        margin: 0 auto;
-
-        border: 1px solid;
-    }
-    .fourchette_horizontal
-    {
         display: none;
-    }
-}
-
-.founders,
-.team
-{
-    font-size: calc(1rem + .3vw);
-    line-height: 140%;
-
-    clear: both;
-
-    margin: 0 auto;
-    padding: 2rem 10vw;
-
-    text-align: left;
-
-    background-color: $yellow;
-
-    p + p
-    {
-        margin-top: .5rem;
-    }
-
-    .name
-    {
-        font-weight: 700;
-    }
-
-    h3
-    {
-        font-family: 'Roboto Condensed', sans-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        line-height: 120%;
-
-        margin-bottom: 1rem;
 
         text-transform: uppercase;
 
-        color: $gold;
+        color: black;
+      }
     }
-}
 
-.founders
-{
-    margin-top: 3rem;
+    .arrow-down {
+      a {
+        font-size: calc(1rem + 4vmin);
 
-    background-color: $gold;
+        position: relative;
+        top: 50vmin;
 
-    h3
-    {
-        color: $yellow;
+        transition-duration: 0.5s;
+        transition-property: all;
+
+        color: $orange;
+
+        &:hover,
+        &:focus {
+          font-size: calc(1.5rem + 4vmin);
+
+          color: $red;
+        }
+      }
     }
+  }
 }
 
-.signature
-{
-    font-size: calc(1rem + 1vw);
-    line-height: 125%;
+// BODY
+.introduction {
+  font-size: calc(1rem + 1vw);
+  line-height: 120%;
 
-    margin-top: 10vw;
+  margin: 0 10vw;
+  padding: 4vw;
 
-    color: $orange;
+  color: $red;
+
+  p + p {
+    margin-top: 10px;
+  }
 }
 
-.newsletter
-{
-    margin: 1rem auto 2rem;
+.announcement {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: calc(1.2rem + 3vw);
+  font-weight: 700;
+
+  margin: 4vw 2vw 3vw;
+
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
+}
+
+.cinema {
+  display: block;
+  overflow: hidden;
+}
+
+.bistrot {
+  font-size: calc(1rem + 0.5vw);
+  background-color: $grey-darker;
+  color: $grey-light;
+  line-height: 160%;
+  padding: 3rem 10vw 4rem;
+  margin-top: calc(2rem + 2vw);
+
+  p {
+    text-align: left;
+  }
+
+  .button {
+    margin-top: 3em;
+    a:hover {
+      background-color: $gold;
+    }
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: calc(1.2rem + 2vw);
+
+    line-height: 120%;
+
+    margin-bottom: 2rem;
+
+    color: $gold;
+  }
+}
+
+.founders,
+.team {
+  font-size: calc(1rem + 0.3vw);
+  line-height: 140%;
+
+  clear: both;
+
+  margin: 0 auto;
+  padding: 3rem 10vw;
+
+  text-align: left;
+
+  background-color: $yellow;
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+
+  .name {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 120%;
+
+    margin-bottom: 1rem;
+
+    text-transform: uppercase;
+
+    color: $gold;
+  }
+}
+
+.founders {
+  background-color: $gold;
+  color: $grey-darker;
+
+  h3 {
+    color: $yellow;
+  }
+}
+
+.team {
+  color: $grey-dark;
+}
+
+.signature {
+  font-size: calc(1rem + 1vw);
+  line-height: 125%;
+
+  margin-top: 10vw;
+
+  color: $orange;
+}
+
+.newsletter {
+  margin: 1rem auto 2rem;
 }
 
 // FOOTER
 
-.footer
-{
-    margin-top: 2vw;
-    padding-bottom: 3vw;
+.footer {
+  margin-top: 2vw;
+  padding-bottom: 3vw;
 
-    color: $grey-light;
-    background-color: $grey-darker;
+  color: $grey-light;
+  background-color: $grey-darker;
 
-    .category
-    {
-        font-size: calc(1em + 1vw);
+  .category {
+    font-size: calc(1em + 1vw);
 
+    display: none;
+
+    margin-bottom: 1em;
+  }
+
+  a {
+    text-decoration: none;
+
+    color: $yellow;
+
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+
+  .social {
+    margin: 0 auto;
+    padding: 1.5em 0;
+
+    background-color: $orange;
+
+    li {
+      display: inline-block;
+
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      display: inline-block;
+
+      &.icon {
+        font-size: calc(2em + 2vw);
+
+        margin: 0 0.5em;
+      }
+
+      &.label {
         display: none;
-
-        margin-bottom: 1em;
+      }
     }
+  }
 
-    a
-    {
-        text-decoration: none;
+  .contact {
+    overflow: hidden;
 
-        color: $yellow;
+    margin-top: 1.5em;
 
-        &:hover,
-        &:focus
-        {
-            color: white;
+    ul {
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: 0 auto;
+
+      text-align: left;
+
+      li {
+        clear: both;
+
+        margin-bottom: 0.5em;
+      }
+
+      div {
+        display: inline-block;
+
+        &.icon {
+          font-size: calc(0.8em + 1vw);
+
+          float: left;
+
+          margin-right: 0.5em;
         }
+
+        &.label {
+          font-size: calc(0.6em + 1vw);
+          line-height: 130%;
+        }
+      }
     }
-
-    .social
-    {
-        margin: 0 auto;
-        padding: 1.5em 0;
-
-        background-color: $orange;
-
-        li
-        {
-            display: inline-block;
-
-            margin: 0;
-            padding: 0;
-        }
-
-        div
-        {
-            display: inline-block;
-
-            &.icon
-            {
-                font-size: calc(2em + 2vw);
-
-                margin: 0 .5em;
-            }
-
-            &.label
-            {
-                display: none;
-            }
-        }
-    }
-
-    .contact
-    {
-        overflow: hidden;
-
-        margin-top: 1.5em;
-
-        ul
-        {
-            width: -webkit-fit-content;
-            width:    -moz-fit-content;
-            width:         fit-content;
-            margin: 0 auto;
-
-            text-align: left;
-
-            li
-            {
-                clear: both;
-
-                margin-bottom: .5em;
-            }
-
-            div
-            {
-                display: inline-block;
-
-                &.icon
-                {
-                    font-size: calc(.8em + 1vw);
-
-                    float: left;
-
-                    margin-right: .5em;
-                }
-
-                &.label
-                {
-                    font-size: calc(.6em + 1vw);
-                    line-height: 130%;
-                }
-            }
-        }
-    }
+  }
 }
 
 // MEDIA QUERIES
-@media screen and (min-width: 414px)
-{
-    .signature
-    {
-        margin-top: 5vw;
-    }
-    .footer
-    {
-        margin-top: 2vw;
-    }
+@media screen and (min-width: 414px) {
+  .signature {
+    margin-top: 5vw;
+  }
+  .footer {
+    margin-top: 2vw;
+  }
 }
 
-@media screen and (min-width: 768px)
-{
-    .fourchette_vertical
-    {
-        display: none;
-    }
-    .fourchette_horizontal
-    {
-        display: block!important;
-    }
-    .footer
-    {
-        .social
-        {
-            .label
-            {
-                font-size: calc(.5em + 1vw);
+@media screen and (min-width: 768px) {
+  .footer {
+    .social {
+      .label {
+        font-size: calc(0.5em + 1vw);
 
-                position: relative;
-                top: -.7em;
-                left: -1em;
+        position: relative;
+        top: -0.7em;
+        left: -1em;
 
-                display: inline-block !important;
+        display: inline-block !important;
 
-                letter-spacing: .1vw;
-            }
-        }
+        letter-spacing: 0.1vw;
+      }
     }
+  }
 }
 
-@media screen and (min-width: 960px)
-{
-    .footer
-    {
-        .social
-        {
-            .icon
-            {
-                font-size: 3em !important;
-            }
-            .label
-            {
-                font-size: 1.1em !important;
-            }
-        }
-
-        .contact
-        {
-            .icon
-            {
-                font-size: 1.1em !important;
-            }
-            .label
-            {
-                font-size: 1.1em !important;
-            }
-        }
+@media screen and (min-width: 960px) {
+  .footer {
+    .social {
+      .icon {
+        font-size: 3em !important;
+      }
+      .label {
+        font-size: 1.1em !important;
+      }
     }
+
+    .contact {
+      .icon {
+        font-size: 1.1em !important;
+      }
+      .label {
+        font-size: 1.1em !important;
+      }
+    }
+  }
 }
