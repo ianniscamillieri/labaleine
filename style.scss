@@ -204,12 +204,31 @@ body
     text-transform: uppercase;
 }
 
-.cta
+.cinema
 {
     display: block;
     overflow: hidden;
 
     margin-top: calc(.5rem + 2vw);
+}
+
+.bistrot
+{
+    text-align: center;
+
+    border: 1px solid;
+
+    .fourchette_horizontal,
+    .fourchette_vertical
+    {
+        margin: 0 auto;
+
+        border: 1px solid;
+    }
+    .fourchette_horizontal
+    {
+        display: none;
+    }
 }
 
 .founders,
@@ -404,6 +423,14 @@ body
 
 @media screen and (min-width: 768px)
 {
+    .fourchette_vertical
+    {
+        display: none;
+    }
+    .fourchette_horizontal
+    {
+        display: block!important;
+    }
     .footer
     {
         .social
