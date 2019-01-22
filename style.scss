@@ -263,6 +263,44 @@ body {
   }
 }
 
+.project {
+  @extend .text1;
+  font-style: italic;
+  background-color: $gold;
+  color: $grey-darker;
+
+  // font-size: calc(1.3rem + 0.3vw);
+  // line-height: 140%;
+
+  clear: both;
+
+  margin: 0 auto;
+  padding: 4rem 10vw;
+
+  text-align: left;
+
+  strong {
+    font-weight: 700;
+  }
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    font-size: calc(1.2rem + 2vw);
+
+    line-height: 120%;
+
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: $yellow;
+  }
+
+  p + p {
+    margin-top: 0.5rem;
+  }
+}
+
 .signature {
   font-size: calc(1rem + 1vw);
   line-height: 125%;
