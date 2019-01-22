@@ -301,13 +301,6 @@ body {
   }
 }
 
-@media (screen) and (min-width: 500px) {
-  .project {
-    padding: 4rem 25vw;
-    color: #eee;
-  }
-}
-
 .team {
   @extend .text3;
 
