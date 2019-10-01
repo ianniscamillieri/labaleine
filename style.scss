@@ -51,6 +51,19 @@ body {
   font-size: 1rem;
 }
 
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
 .text1 {
   font-size: calc(1rem + 1vw);
   line-height: 120%;
@@ -221,27 +234,27 @@ body {
 }
 
 // BODY
-// .alert {
-//   @extend .text2;
-//   text-align: center;
-//
-//   background-color: $grey-darker;
-//   color: $grey-light;
-//   padding: 3rem 10vw 3rem;
-//   margin-top: none;
-//
-//   h3 {
-//     font-family: "Roboto", sans-serif;
-//     text-align: center;
-//     font-size: calc(1.2rem + 2vw);
-//
-//     line-height: 120%;
-//
-//     margin-bottom: 2rem;
-//
-//     color: $orange;
-//   }
-// }
+.alert {
+  @extend .text2;
+  text-align: center;
+
+  background-color: $grey-darker;
+  color: $grey-light;
+  padding: 3rem 10vw 3rem;
+  margin-top: none;
+
+  h3 {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: calc(1.2rem + 2vw);
+
+    line-height: 120%;
+
+    margin-bottom: 1.5rem;
+
+    color: $orange;
+  }
+}
 
 .introduction {
   @extend .text1;
